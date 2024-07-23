@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+  }
+  
+  .tab.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .tab:hover:not(.active) {
+    background-color: #e2e8f0;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 18vw;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .card-title {
+    font-weight: 600;
+    margin: 0.5rem 0;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .card-price {
+    color: #6b7280;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #ef4444;
+  }
+  
+  .badge {
+    background-color: #38bdf8;
+    color: #1a202c;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    position: absolute;
+    margin: 0.7rem;
+  }
+  
+  .btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  .btn:hover {
+    background-color: green;
+  }
+  
+  .divForHeading {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
