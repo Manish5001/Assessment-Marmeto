@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +7,7 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f8f9fa;
   }
   
@@ -20,6 +22,7 @@
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
   }
   
   .tabs {
@@ -34,6 +37,12 @@
     cursor: pointer;
     width: 20%;
   }
+
+  .tab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
   .tab.active {
     background-color: black;
@@ -72,7 +81,7 @@
   
   .card-img {
     width: 100%;
-    height: 10rem;
+    height: 20rem;
     object-fit: cover;
     border-radius: 0.5rem;
   }
@@ -96,7 +105,7 @@
   }
   
   .badge {
-    background-color: #38bdf8;
+    background-color: #ffffff;
     color: #1a202c;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
@@ -126,3 +135,4 @@
     align-items: center;
     justify-content: start;
   }
+  

@@ -2,26 +2,45 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Marmeto</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmeto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
 </head>
 
 <body>
-	<div class="container">
-		<h2 class="heading">SELECT YOUR CHOICE</h2>
-		<div class="tabs">
-			<button class="tab active" data-category="Men">Men</button>
-			<button class="tab" data-category="Women">Women</button>
-			<button class="tab" data-category="Kids">Kids</button>
-		</div>
-		<div class="grid" id="product-grid">
-			<!-- Product cards will be dynamically inserted here -->
-		</div>
-	</div>
+    <div class="container">
+        <h2 class="heading">SELECT YOUR CHOICE</h2>
+        <div class="tabs">
+            <button class="tab active" data-category="Men">
+                <div class="tab-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-720q-111 0-196 66.5T171-564q20-5 41.5-19.5T262-654q15-31 44-48.5t64-17.5h220q35 0 64 17.5t44 48.5q28 57 50.5 71t40.5 19q-28-103-112.5-169.5T480-800Zm0 640q134 0 227.5-94T800-482q-71-7-109-44.5T626-618q-5-11-14.5-16.5T591-640H370q-12 0-21.5 5.5T334-618q-27 55-66 92.5T160-481q0 134 93.5 227.5T480-160ZM360-390q-21 0-35.5-14.5T310-440q0-21 14.5-35.5T360-490q21 0 35.5 14.5T410-440q0 21-14.5 35.5T360-390Zm240 0q-21 0-35.5-14.5T550-440q0-21 14.5-35.5T600-490q21 0 35.5 14.5T650-440q0 21-14.5 35.5T600-390ZM480-720Z"/></svg>
+                    <span>Men</span>
+                </div>
+            </button>
+            <button class="tab" data-category="Women">
+                <div class="tab-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M360-310q-21 0-35.5-14.5T310-360q0-21 14.5-35.5T360-410q21 0 35.5 14.5T410-360q0 21-14.5 35.5T360-310Zm240 0q-21 0-35.5-14.5T550-360q0-21 14.5-35.5T600-410q21 0 35.5 14.5T650-360q0 21-14.5 35.5T600-310ZM480-80q134 0 227-93t93-227q0-24-3-46.5T786-490q-21 5-42 7.5t-44 2.5q-91 0-172-39T390-628q-32 78-91.5 135.5T160-406v6q0 134 93 227t227 93Zm-54-635q42 70 114 112.5T700-560q14 0 27-1.5t27-3.5q-42-70-114-112.5T480-720q-14 0-27 1.5t-27 3.5ZM177-501q51-29 89-75t57-103q-51 29-89 75t-57 103Zm249-214Zm-103 36Zm-196 92q28-53 70.5-95.5T293-753q-17-21-41-34t-53-13q-50 0-84.5 34.5T80-681q0 29 13 53t34 41ZM480 0q-83 0-156-31.5T197-117q-54-54-85.5-127T80-400q0-29 4-57.5T96-512q-43-26-69.5-70.5T0-681q0-83 58-141t141-58q53 0 97.5 25.5T368-784q26-8 54.5-12t57.5-4q83 0 156 31.5T763-683q54 54 85.5 127T880-400q0 83-31.5 156T763-117q-54 54-127 85.5T480 0ZM197-683Z"/></svg>
+                    <span>Women</span>
+                </div>
+            </button>
+            <button class="tab" data-category="Kids">
+                <div class="tab-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M580-490q-21 0-35.5-14.5T530-540q0-21 14.5-35.5T580-590q21 0 35.5 14.5T630-540q0 21-14.5 35.5T580-490Zm-200 0q-21 0-35.5-14.5T330-540q0-21 14.5-35.5T380-590q21 0 35.5 14.5T430-540q0 21-14.5 35.5T380-490Zm100 210q-60 0-108.5-33T300-400h360q-23 54-71.5 87T480-280Zm0 160q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82h-12q-6 0-12 2-6 6-8 13t-2 15q0 21 14.5 35.5T496-680q9 0 16.5-3t15.5-3q12 0 20 9t8 21q0 23-21.5 29.5T496-620q-45 0-77.5-32.5T386-730v-6q0-3 1-8-83 30-135 101t-52 163q0 116 82 198t198 82Zm0-280Z"/></svg>
+                    <span>Kids</span>
+                </div>
+            </button>
+        </div>
+        <div class="grid" id="product-grid">
+            <!-- Product cards will be dynamically inserted here -->
+        </div>
+    </div>
 
-	<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
